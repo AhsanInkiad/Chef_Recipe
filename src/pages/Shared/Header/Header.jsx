@@ -4,7 +4,7 @@ import './Header.css'
 const Header = () => {
     return (
         <div>
-            <Navbar className='pt-4 pb-4 a' collapseOnSelect expand="lg" variant="dark">
+            <Navbar className='pt-2 pb-2 a border  border-light-subtle  border-start-0 border-end-0' collapseOnSelect expand="lg" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home"> <span className='site-name'>TASTE OF</span> ITALY</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />

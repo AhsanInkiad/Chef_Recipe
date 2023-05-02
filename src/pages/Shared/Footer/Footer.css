@@ -1,0 +1,114 @@
+.footer-bhai{
+    background-color: #3B3B3B;
+}
+
+.footer-site-name{
+    color: rgb(216, 160, 104);
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .call-btn {
+    --glow-color: rgb(216, 160, 104);
+    --glow-spread-color: rgb(214, 152, 90);
+    --enhanced-glow-color:  rgb(206, 173, 140);
+    --btn-color: rgb(218, 149, 79);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   .call-btn::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   .call-btn:hover {
+    color: white;
+    background-color: var(--glow-color);
+ 
+   }
+   
+   .call-btn:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+   .loading-spinner {
+    display: flex;
+    justify-content: center
+    ;
+  }
+  
+  .loading-spinner-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loading-spinner-circle {
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    background-color: #db9334;
+    margin: 0 5px;
+    animation: loading-spinner 1s ease-in-out infinite;
+  }
+  
+  .loading-spinner-circle:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .loading-spinner-circle:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .loading-spinner-circle:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  .loading-spinner-circle:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes loading-spinner {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    20% {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+
+  .footer-lines{
+    color: #eac39b;
+  }
