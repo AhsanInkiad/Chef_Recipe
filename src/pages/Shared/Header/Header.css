@@ -1,0 +1,38 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Exo+2:wght@100;700&family=Open+Sans:wght@500&family=Poppins:wght@700;800&family=Work+Sans:wght@500;700&display=swap');
+
+
+
+.a{
+    background-color: #3B3B3B;
+}
+
+.custom-btn {
+    background:  #3B3B3B;
+    color: white;
+    padding: 0.6em 1.3em;
+   
+    border: 1px solid #F2AE68;
+    border-radius: 0.4em;
+    
+  }
+  
+  .custom-btn:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  .custom-btn:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+
+  .site-name{
+    color: #D8A068;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .home-n-blog{
+    color: #eac39b !important;
+  }
