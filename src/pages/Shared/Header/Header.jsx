@@ -3,9 +3,23 @@ import { Container, Image, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import './Header.css'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
-const Header = () => {
+import { getAuth, signOut } from "firebase/auth";
 
-    const { user } = useContext(AuthContext);
+const Header = () => {
+    const auth = getAuth();
+    const { user , setUser} = useContext(AuthContext);
+
+    const handleLogOut = (event) => {
+        signOut(auth)
+            .then(() => {
+                // Sign-out successful.
+                setUser(null);
+                
+            })
+            .catch((error) => {
+                // An error happened.
+            });
+    }
 
     return (
         <div>
@@ -20,14 +34,14 @@ const Header = () => {
                             </div>
                             <Nav.Link href="#pricing"><span className='home-n-blog'>Blog</span></Nav.Link>
                         </Nav>
-                        <Nav className='md:d-flex md:align-items-center'>
-                            {user && <div className='d-flex align-items-center'>
-                                <Image src="ss" roundedCircle />
+                        <Nav className='md:d-flex md:align-items-center '>
+                            {user && <div className='d-flex align-items-center me-2'>
+                                <Image className='user-er-pic' src={user.photoURL} roundedCircle />
                             </div>}
-                            {user && <p className='text-white d-flex align-items-center'>{user.displayName}</p>}
+
 
                             {user ?
-                                <button className='custom-btn'> Logout</button> :
+                                <button onClick={handleLogOut} className='custom-btn'> Logout</button> :
                                 <Link to="/login">
                                     <button className='custom-btn'> Login</button>
                                 </Link>
