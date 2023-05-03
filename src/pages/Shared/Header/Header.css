@@ -35,4 +35,9 @@
 
   .home-n-blog{
     color: #eac39b !important;
+    
+  }
+
+  .link-to-home{
+    text-decoration: none;
   }

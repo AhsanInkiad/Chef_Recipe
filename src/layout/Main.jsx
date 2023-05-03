@@ -4,6 +4,7 @@ import Footer from '../pages/Shared/Footer/Footer';
 import banner from '../assets/banner-3.jpg'
 import { Container, Image } from 'react-bootstrap';
 import './Main.css'
+import { Outlet } from 'react-router-dom';
 const Main = () => {
     return (
         <div>
@@ -16,7 +17,7 @@ const Main = () => {
                      <br />& FRESH FOOD </p>
                      <p className='taste'>ft.Italy</p>
                     </div>
-                    
+                    <Outlet></Outlet>
                 </Container>
                
             </div>
