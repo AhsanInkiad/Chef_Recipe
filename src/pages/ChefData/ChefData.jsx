@@ -35,10 +35,11 @@ const ChefData = () => {
 
             </div>
             <div className='details-cardgulo'>
+            <p className='taste recipe-tag text-center fs-1 pt-5'>Recipe :</p>
                 <Container className='container-card-holder'>
                     {
                         chefDetails.recipes.map(recipe =>
-                            <div className='cc py-5'>
+                            <div className='cc '>
                                 <div className='py-5'>
                                     <div class="caard my-5">
                                         <div className=' '>
@@ -57,7 +58,7 @@ const ChefData = () => {
                                             {
                                                 recipe.ingredients.map(ingreds => <li className='ms-4'>{ingreds}</li>)
                                             }
-                                            <Button  disabled={buttonDisabled} onClick={showToastMessage} className='ms-2 mt-2' variant="dark">Favourite</Button>
+                                            <Button  disabled={buttonDisabled} onClick={showToastMessage} className='ms-2 mt-3' variant="dark">Favourite</Button>
                                            
 
 

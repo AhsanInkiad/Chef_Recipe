@@ -63,10 +63,12 @@
 
 .recipe-er-pic{
     height: 130px;
-    width: 150px;
+    width: 200px;
     border-radius: 5%;
 }
-
+.recipe-tag{
+    color:#0D1317 !important;
+}
 @media only screen and (max-width: 600px) {
     .chef-bhai-pic{
         height: 150px;
