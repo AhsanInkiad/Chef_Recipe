@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDwm_AejPbScVFUxmjggWtVGNgoQpL6v-Q",
-  authDomain: "taste-of-italy-532ce.firebaseapp.com",
-  projectId: "taste-of-italy-532ce",
-  storageBucket: "taste-of-italy-532ce.appspot.com",
-  messagingSenderId: "735088176142",
-  appId: "1:735088176142:web:3781eac424062770bce05f"
+  apiKey: import.meta.env.VITE_apiKey ,
+  authDomain: import.meta.env.VITE_authDomain ,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId:  import.meta.env.VITE_appId
 };
 
 // Initialize Firebase

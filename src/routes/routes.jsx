@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
 import ChefData from "../pages/ChefData/ChefData";
 import PrivateRoutes from "./PrivateRoutes";
+import NotFound from "../pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
 
@@ -23,10 +24,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <LoginLayout></LoginLayout>,
         children: [
-           {
-            path:'/',
-            element: <Navigate ></Navigate>
-           },
+            {
+                path: '/',
+                element: <Navigate ></Navigate>
+            },
             {
                 path: 'login',
                 element: <Login></Login>,
@@ -38,10 +39,16 @@ const router = createBrowserRouter([
             {
                 path: ":id",
                 element: <PrivateRoutes><ChefData></ChefData></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
-            }
+                loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
+            },
+           
         ]
+    },
+    {
+        path: '*',
+        element: <div>4000004 not found</div>
     }
+
 
 ])
 

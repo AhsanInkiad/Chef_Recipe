@@ -7,9 +7,10 @@ import { getAuth, signOut } from "firebase/auth";
 
 const Header = () => {
     const auth = getAuth();
-    const { user , setUser} = useContext(AuthContext);
+    const { user , setUser, setLoading} = useContext(AuthContext);
 
     const handleLogOut = (event) => {
+        setLoading(true);
         signOut(auth)
             .then(() => {
                 // Sign-out successful.
