@@ -34,7 +34,10 @@ const Header = () => {
                             <div className='d-flex align-items-center'>
                                 <ActiveLink className='link-to-home' to="/"><span className='home-n-blog'>Home</span></ActiveLink>
                             </div>
-                            <ActiveLink className="" href="#pricing"><span className='home-n-blog'>Blog</span></ActiveLink>
+                            <div className='d-flex align-items-center ms-2'>
+                                <ActiveLink className='link-to-home' to="/blogs"><span className='home-n-blog'>Blogs</span></ActiveLink>
+                            </div>
+                           
                         </Nav>
                         <Nav className='md:d-flex md:align-items-center '>
                             {user && <div className='d-flex align-items-center me-2'>

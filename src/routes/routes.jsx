@@ -7,6 +7,7 @@ import Register from "../pages/Login/Register/Register";
 import ChefData from "../pages/ChefData/ChefData";
 import PrivateRoutes from "./PrivateRoutes";
 import NotFound from "../pages/NotFound/NotFound";
+import Blogs from "../pages/Blogs/Blogs";
 
 const router = createBrowserRouter([
 
@@ -41,12 +42,16 @@ const router = createBrowserRouter([
                 element: <PrivateRoutes><ChefData></ChefData></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/chefs/${params.id}`)
             },
+            {
+                path: "blogs",
+                element: <Blogs></Blogs>
+            },
+            {
+                path: '*',
+                element: <NotFound></NotFound>
+            }
            
         ]
-    },
-    {
-        path: '*',
-        element: <div>4000004 not found</div>
     }
 
 
