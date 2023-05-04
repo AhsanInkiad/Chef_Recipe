@@ -6,7 +6,7 @@ import { AiFillLike } from "react-icons/ai";
 import { GiCook } from "react-icons/gi";
 import { SiCodechef } from "react-icons/si";
 import { CiForkAndKnife } from "react-icons/ci";
-
+import LazyLoad from 'react-lazy-load';
 
 
 

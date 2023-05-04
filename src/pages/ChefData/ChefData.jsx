@@ -7,7 +7,7 @@ import { GiCook } from "react-icons/gi";
 import { SiCodechef } from "react-icons/si";
 import { CiForkAndKnife } from "react-icons/ci";
 import Rating from 'react-rating';
-
+import LazyLoad from 'react-lazy-load';
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -24,7 +24,11 @@ const ChefData = () => {
         <div>
             <div className='details-banner py-5'>
                 <Container className='py-5 d-flex justify-content-center'>
-                    <img className='chef-bhai-pic' src={chefPicture} alt="" />
+                    
+                    <LazyLoad height={400} width={400} threshold={0.95} >
+                        <img className='chef-bhai-pic' src={chefPicture} alt="" />
+                    </LazyLoad>
+                    
 
                 </Container>
                 <p className='text-center text-white fs-5'>  | {description} |</p>
