@@ -49,6 +49,7 @@ const Login = () => {
                 const Guser = result.user;
                 setProfile(Guser);
                 setUser(Guser);
+                navigate('/');
             })
             .catch(error =>{
                 console.log(error);
@@ -61,6 +62,7 @@ const Login = () => {
                 const Gituser = result.user;
                 setProfile(Gituser);
                 setUser(Gituser);
+                navigate('/');
             })
             .catch(error =>{
                 console.log(error);
