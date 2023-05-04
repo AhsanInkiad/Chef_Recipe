@@ -1,0 +1,99 @@
+
+.details-banner{
+    background-color: #0D1317;
+}
+.chef-bhai-pic{
+    height: 400px;
+    width: 400px;
+    border-radius: 5%;
+}
+
+.spanshomuho{
+    color: #EAC398;
+}
+
+.caard {
+    width: 270px;
+    height: 500px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    background: #fff;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    position: relative;
+    transition: all .4s;
+   }
+   .rate{
+    display: block;
+   }
+   .caard::before {
+    content: '---Italian Food---';
+    letter-spacing: 0.2em;
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    color: rgb(51, 51, 51);
+    font-size: 0.8em;
+    font-weight: 700;
+   }
+   
+   .caard div {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+    cursor: pointer;
+    z-index: 10;
+    transition: all .4s;
+    background-color: #fff;
+   }
+   
+   .caard:hover div {
+    transform: translateY(-30px);
+   }
+
+.details-cardgulo{
+    background-color: #FFE9D1;
+}
+
+.container-card-holder{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-er-pic{
+    height: 130px;
+    width: 150px;
+    border-radius: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    .chef-bhai-pic{
+        height: 150px;
+        width: 150px;
+        border-radius: 5%;
+    }
+    .container-card-holder{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+}
+
+@media only screen and (max-width: 950px) {
+    .chef-bhai-pic{
+        height: 250px;
+        width: 250px;
+        border-radius: 5%;
+    }
+ 
+    .container-card-holder{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+}

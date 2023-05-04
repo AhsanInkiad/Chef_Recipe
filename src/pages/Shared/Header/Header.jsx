@@ -36,10 +36,8 @@ const Header = () => {
                         </Nav>
                         <Nav className='md:d-flex md:align-items-center '>
                             {user && <div className='d-flex align-items-center me-2'>
-                                <Image className='user-er-pic' src={user.photoURL} roundedCircle />
+                                <Image className='user-er-pic' title={user.displayName} src={user.photoURL} roundedCircle />
                             </div>}
-
-
                             {user ?
                                 <button onClick={handleLogOut} className='custom-btn'> Logout</button> :
                                 <Link to="/login">

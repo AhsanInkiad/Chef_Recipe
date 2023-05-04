@@ -112,3 +112,16 @@
   .footer-lines{
     color: #eac39b;
   }
+
+  .footer-er-kaj{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  @media only screen and (max-width: 300px){
+    .footer-er-kaj{
+      display: flex;
+      flex-direction: column;
+    
+    }
+  }
