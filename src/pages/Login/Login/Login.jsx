@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './Login.css'
 import { Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../../firebase/firebase.config';
@@ -11,10 +11,13 @@ const Login = () => {
     
     const [profile, setProfile] = useState(null);
     
+    const navigate = useNavigate();
+
     const auth = getAuth(app);
     const provider =new GoogleAuthProvider();
     const provider2 = new GithubAuthProvider();
     
+   
     
     const handleLogin = event =>{
         event.preventDefault();
@@ -27,8 +30,10 @@ const Login = () => {
         .then(result => {
             const loggedUser = result.user;
             setUser(loggedUser);
+
             setProfile(loggedUser);
             console.log(loggedUser);
+            navigate('/');
             setErr('');
             event.target.reset();
         })

@@ -4,6 +4,7 @@ import './Header.css'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { getAuth, signOut } from "firebase/auth";
+import ActiveLink from '../../../ActiveLink/ActiveLink';
 
 const Header = () => {
     const auth = getAuth();
@@ -31,9 +32,9 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
                             <div className='d-flex align-items-center'>
-                                <Link className='link-to-home' to="/"><span className='home-n-blog'>Home</span></Link>
+                                <ActiveLink className='link-to-home' to="/"><span className='home-n-blog'>Home</span></ActiveLink>
                             </div>
-                            <Nav.Link href="#pricing"><span className='home-n-blog'>Blog</span></Nav.Link>
+                            <ActiveLink className="" href="#pricing"><span className='home-n-blog'>Blog</span></ActiveLink>
                         </Nav>
                         <Nav className='md:d-flex md:align-items-center '>
                             {user && <div className='d-flex align-items-center me-2'>
