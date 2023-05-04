@@ -8,7 +8,9 @@
   background-repeat: no-repeat;
 
 }
-
+.kola{
+  color:#eacdb1;
+}
 .taste {
   color: #D8A068;
   font-family: 'Dancing Script', cursive;
@@ -319,6 +321,17 @@
   border-radius: 50%;
 }
 
+.section-2{
+  background-color: #11191F;
+}
+.quotes-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.big-icon{
+  font-size: 70px;
+}
 @media only screen and (max-width: 800px) {
   .cardholder {
     display: flex;
@@ -326,7 +339,15 @@
     justify-content: center;
    
   }
- .chief-der-card{
+
+  .quotes-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+ .chief-der-card, .cards{
   display: flex;
   justify-content: center;
  }
