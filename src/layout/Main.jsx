@@ -24,13 +24,13 @@ const Main = () => {
     const [chefData2, setChefData2] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/chefs')
+        fetch('https://taste-of-italy-server-ahsaninkiad.vercel.app/chefs')
             .then(res => res.json())
             .then(data => setChefData(data.slice(0, 3)))
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/chefs')
+        fetch('https://taste-of-italy-server-ahsaninkiad.vercel.app/chefs')
             .then(res => res.json())
             .then(data => setChefData2(data.slice(3, 6)))
     }, [])
